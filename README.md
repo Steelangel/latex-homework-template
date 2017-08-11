@@ -1,37 +1,26 @@
 latex-homework-template
 =======================
 
-The LaTeX file that I use as the base for all my homeworks in university.
+LaTeX .sty version of Josh Davis's excellent homework style file. There are a few (major) differences between this file and the original, mostly in macros.  
 
-## Features
+## Features/How-To
+Download the mathhomework.sty file to your working directory. 
 
-Here are just a few features of this homework template.
+The preamble of your document should include the following code to format the title page: 
 
-1. Title page.
-2. Problem markers.
-3. Configurable problem numbers (see the last 3 problems for an example).
-4. Some commonly used math macros.
+```
+\documentclass{article}
+\usepackage{mathhomework}
 
-## Screenshots
+\hmwkAuthor{Jane L.\ Jankowski} 		% Put your name here
+\hmwkNumber{1} 					% What Homework number is this? 
+\hmwkDueDate{September 4, 2016} 	% When is this due?
+\hmwkClass{My Class}			% Put the name of the Class here!
+```
 
-### The Cover Page:
+Each homework problem should be put into the `homeworkProblem` environment (note the spelling!)
 
-![Cover page](/images/latex1.png)
 
-### Big Oh Example Problem:
-![Example problems 1](/images/latex2.png)
-
-### Automata & Pseudocode Problems:
-![Example problems 2](/images/latex3.png)
-
-### Statistics Problem:
-![Example problems 3](/images/latex4.png)
-
-### Proof Problem:
-![Example problems 4](/images/latex5.png)
-
-### Adjustable Problem Numbers
-![Example problem numbering](/images/latex6.png)
 
 ## Installing
 
@@ -47,8 +36,7 @@ Here are just a few features of this homework template.
 
 ## Credit
 
-When first starting with LaTeX, I came across [this template][credit] and used
-it as a base for starting my template. As you can see, it is pretty similar.
+All credit for the initial design goes to [Josh Davis][josh]. Thanks!
 
 ## License
 
@@ -56,4 +44,4 @@ This code is distributed under the MIT license. For more info, read the
 [LICENSE](/LICENSE) file distributed with the source code.
 
 [texshop]: http://pages.uoregon.edu/koch/texshop/
-[credit]: http://www.latextemplates.com/template/programming-coding-assignment
+[josh]: https://github.com/jdavis
