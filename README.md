@@ -1,37 +1,57 @@
 latex-homework-template
 =======================
 
-The LaTeX file that I use as the base for all my homeworks in university.
+LaTeX .sty version of Josh Davis's excellent homework style file. There are a few (major) differences between this file and the original, mostly in macros.  
 
-## Features
+## Features/How-To
+Download the `mathhomework.sty` file to your working directory. Check out the sample file as well. 
 
-Here are just a few features of this homework template.
+The preamble of your document should include the following code to format the title page: 
 
-1. Title page.
-2. Problem markers.
-3. Configurable problem numbers (see the last 3 problems for an example).
-4. Some commonly used math macros.
+```
+\documentclass{article}
+\usepackage{mathhomework}
 
-## Screenshots
+\hmwkAuthor{Jane L.\ Jankowski}     % Put your name here
+\hmwkNumber{1}                      % What Homework number is this? 
+\hmwkDueDate{September 4, 2016}     % When is this due?
+\hmwkClass{My Class}                % Put the name of the Class here!
+```
 
-### The Cover Page:
+Each homework problem should be put into the `homeworkProblem` environment (note the spelling!)
 
-![Cover page](/images/latex1.png)
+Although LaTeX does a good job breaking pages where it is appropriate, you can use `\pagebreak` to force a pagebreak at any point. It's a good idea to use `\pagebreak` between individual homrwork problems for clarity. 
 
-### Big Oh Example Problem:
-![Example problems 1](/images/latex2.png)
+If there is a bonus problem, you can use the `lasthomeworkProblem` environment to mark the last problem, and then use the `bonusProblem` environment to typeset the bonus problem. 
 
-### Automata & Pseudocode Problems:
-![Example problems 2](/images/latex3.png)
+Use `\solution` to mark the solution of the problem. If there are multiple parts to the solution, you can use `\part[]`. The optional input will replace **Part A** with whatever text is inside the brackets. For example: `\part[Hard Part]` will typeset as **Hard Part**. 
 
-### Statistics Problem:
-![Example problems 3](/images/latex4.png)
+### Useful Macros for Mathematics
+All of the following are usable in math mode only. 
 
-### Proof Problem:
-![Example problems 4](/images/latex5.png)
+|Command|Description|
+|----|----|
+|`\erf`| Error Function|
+|`\erfc`| Complimentary Error Function|
+|`\mat{}`| Sans-serif matrix notation|
+|`\begin{amatrix}` ... `\end{amtrix}`| For augmented matrices| 
+|`\ihat`, `\jhat`, `\khat`| _i, j, k_ notation for Vectors|
+|`\vec{}`| Boldface vector notation|
+|`\div{\vec{}}`| Divergence|
+|`\curl{\vec{}}`| Curl|
+|`\grad{\vec{}}`| Gradient|
+|`\deriv[]{}{}`| The derivative operator. The optional input is the order of the derivative. The second input is the function (this may be left blank), and third is the variable. For example: `\deriv[2]{y}{x}` gives the second derivative of _y_ with respect to _x_, and `\deriv{}{x}` gives the derivative operator with respect to x alone. |
+|`dderiv[]{}{}`| Derivative operator in `displaystyle`|
+|`pderiv[]{}{}`| Partial derivative operator|
+|`dpderiv[]{}{}`| Partial derivative operator in `displaystyle`|
+|`\dint`|Larger integral sign|
+|`\dx`|Infinitesimal operator: d<em>x</em> as opposed to _dx_. Use for integrals.| 
+|`\d`| Infinitesimal operator for non-_x_ variables. Usage: `\,\d y` gives d<em>y</em>|
+|`\dot{}`, `\ddot{}` | Overdot(s) for time derivatives|
 
-### Adjustable Problem Numbers
-![Example problem numbering](/images/latex6.png)
+### Code Listings
+
+For code, use the `listing` environment. The default is set to Python code style. 
 
 ## Installing
 
@@ -47,8 +67,7 @@ Here are just a few features of this homework template.
 
 ## Credit
 
-When first starting with LaTeX, I came across [this template][credit] and used
-it as a base for starting my template. As you can see, it is pretty similar.
+All credit for the initial design goes to [Josh Davis][josh]. Thanks!
 
 ## License
 
@@ -56,4 +75,4 @@ This code is distributed under the MIT license. For more info, read the
 [LICENSE](/LICENSE) file distributed with the source code.
 
 [texshop]: http://pages.uoregon.edu/koch/texshop/
-[credit]: http://www.latextemplates.com/template/programming-coding-assignment
+[josh]: https://github.com/jdavis
