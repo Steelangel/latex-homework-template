@@ -41,9 +41,9 @@ All of the following are usable in math mode only.
 |`\curl{\vec{}}`| Curl|
 |`\grad{\vec{}}`| Gradient|
 |`\deriv[]{}{}`| The derivative operator. The optional input is the order of the derivative. The second input is the function (this may be left blank), and third is the variable. For example: `\deriv[2]{y}{x}` gives the second derivative of _y_ with respect to _x_, and `\deriv{}{x}` gives the derivative operator with respect to x alone. |
-|`dderiv[]{}{}`| Derivative operator in `displaystyle`|
-|`pderiv[]{}{}`| Partial derivative operator|
-|`dpderiv[]{}{}`| Partial derivative operator in `displaystyle`|
+|`\dderiv[]{}{}`| Derivative operator in `displaystyle`|
+|`\pderiv[]{}{}`| Partial derivative operator|
+|`\dpderiv[]{}{}`| Partial derivative operator in `displaystyle`|
 |`\dint`|Larger integral sign|
 |`\dx`|Infinitesimal operator: d<em>x</em> as opposed to _dx_. Use for integrals.| 
 |`\d`| Infinitesimal operator for non-_x_ variables. Usage: `\,\d y` gives d<em>y</em>|
