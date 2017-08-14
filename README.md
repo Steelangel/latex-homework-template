@@ -34,7 +34,7 @@ All of the following are usable in math mode only.
 |`\erf`| Error Function|
 |`\erfc`| Complimentary Error Function|
 |`\mat{}`| Sans-serif matrix notation|
-|`\begin{amatrix}` ... `\end{amtrix}`| For augmented matrices| 
+|`\begin{amatrix}` ... `\end{amatrix}`| For augmented matrices| 
 |`\ihat`, `\jhat`, `\khat`| _i, j, k_ notation for Vectors|
 |`\vec{}`| Boldface vector notation|
 |`\div{\vec{}}`| Divergence|
